@@ -1,0 +1,46 @@
+# Privacy Policy — DevTools Unlock (Chrome extension)
+
+**Last updated: August 1, 2026**
+
+DevTools Unlock is a Chrome extension that lets a developer keep Chrome DevTools open on `maimai.cn` without the page ending their session. This document describes exactly what the extension does and does not do with data.
+
+Rendered version: <https://walle-go.github.io/devtools-unlock-privacy/>
+
+## Summary
+
+**DevTools Unlock does not collect, transmit, sell, or share any user data.** There is no server, no analytics, no telemetry, and no network request of any kind originating from this extension.
+
+## Data we collect
+
+None.
+
+The extension collects none of the following: personally identifiable information, health information, financial or payment information, authentication information, personal communications, location, web history, or user activity. It does not read page content, form values, or cookies, and it does not have access to any site other than `maimai.cn`.
+
+## Data stored on your device
+
+The extension keeps one optional diagnostic log in your own browser's `localStorage`, under the key `__du_log`, on the `maimai.cn` origin. It is a ring buffer capped at 200 entries and it never leaves your computer.
+
+Each entry records only non-identifying technical facts about a page load, so that unexpected sign-outs can be diagnosed:
+
+- the type of event (page load, sweep, sign-out page reached, page unload)
+- the page URL within `maimai.cn`
+- whether the DevTools window appeared to be docked, derived from the window's inner/outer size difference
+- timing values and timer id counts
+
+You can view this log at any time by running `JSON.parse(localStorage.__du_log)` in the console, and erase it by appending `#du-clear-log` to the URL and reloading. Removing the extension and clearing site data for `maimai.cn` also erases it.
+
+## Permissions
+
+The extension declares no Chrome permissions at all. Its only access is a content script matched to `maimai.cn`, which is required for its single purpose: stopping the page's repeating DevTools-detection timer.
+
+## Remote code
+
+The extension executes no remotely hosted code. All of its logic is contained in the single `guard.js` file included in the published package.
+
+## Changes to this policy
+
+Any change to this policy will be published in this repository.
+
+## Contact
+
+Questions about this policy: open an issue at <https://github.com/walle-go/devtools-unlock-privacy/issues>.

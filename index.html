@@ -20,28 +20,28 @@
 <h1>Privacy Policy — DevTools Unlock</h1>
 <p class="updated">Last updated: August 1, 2026</p>
 
-<p>DevTools Unlock is a Chrome extension that lets a developer keep Chrome DevTools open on <code>maimai.cn</code> without the page ending their session. This document describes exactly what the extension does and does not do with data.</p>
+<p>DevTools Unlock is a Chrome extension that lets a developer keep Chrome DevTools open on one specific site without that page ending their session. This document describes exactly what the extension does and does not do with data.</p>
 
 <h2>Summary</h2>
 <p><strong>DevTools Unlock does not collect, transmit, sell, or share any user data.</strong> There is no server, no analytics, no telemetry, and no network request of any kind originating from this extension.</p>
 
 <h2>Data we collect</h2>
 <p>None.</p>
-<p>The extension collects none of the following: personally identifiable information, health information, financial or payment information, authentication information, personal communications, location, web history, or user activity. It does not read page content, form values, or cookies, and it does not have access to any site other than <code>maimai.cn</code>.</p>
+<p>The extension collects none of the following: personally identifiable information, health information, financial or payment information, authentication information, personal communications, location, web history, or user activity. It does not read page content, form values, or cookies, and it has no access to any site beyond the single one declared in its manifest.</p>
 
 <h2>Data stored on your device</h2>
-<p>The extension keeps one optional diagnostic log in your own browser's <code>localStorage</code>, under the key <code>__du_log</code>, on the <code>maimai.cn</code> origin. It is a ring buffer capped at 200 entries and it never leaves your computer.</p>
+<p>The extension keeps one optional diagnostic log in your own browser's <code>localStorage</code>, under the key <code>__du_log</code>, on that site's origin only. It is a ring buffer capped at 200 entries and it never leaves your computer.</p>
 <p>Each entry records only non-identifying technical facts about a page load, so that unexpected sign-outs can be diagnosed:</p>
 <ul>
   <li>the type of event (page load, sweep, sign-out page reached, page unload)</li>
-  <li>the page URL within <code>maimai.cn</code></li>
+  <li>the page URL within that same site</li>
   <li>whether the DevTools window appeared to be docked, derived from the window's inner/outer size difference</li>
   <li>timing values and timer id counts</li>
 </ul>
-<p>You can view this log at any time by running <code>JSON.parse(localStorage.__du_log)</code> in the console, and erase it by appending <code>#du-clear-log</code> to the URL and reloading. Removing the extension and clearing site data for <code>maimai.cn</code> also erases it.</p>
+<p>You can view this log at any time by running <code>JSON.parse(localStorage.__du_log)</code> in the console, and erase it by appending <code>#du-clear-log</code> to the URL and reloading. Removing the extension and clearing that site's data also erases it.</p>
 
 <h2>Permissions</h2>
-<p>The extension declares no Chrome permissions at all. Its only access is a content script matched to <code>maimai.cn</code>, which is required for its single purpose: stopping the page's repeating DevTools-detection timer.</p>
+<p>The extension declares no Chrome permissions at all. Its only access is a content script matched to the single site named in its manifest, which is required for its single purpose: stopping the page's repeating DevTools-detection timer.</p>
 
 <h2>Remote code</h2>
 <p>The extension executes no remotely hosted code. All of its logic is contained in the single <code>guard.js</code> file included in the published package.</p>

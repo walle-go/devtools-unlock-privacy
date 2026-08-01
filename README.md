@@ -1,14 +1,14 @@
-# Privacy Policy — DevTools Unlock (Chrome extension)
+# Privacy Policy — DevUnlock (Chrome extension)
 
 **Last updated: August 1, 2026**
 
-DevTools Unlock is a Chrome extension that lets a developer keep Chrome DevTools open on one specific site without that page ending their session. This document describes exactly what the extension does and does not do with data.
+DevUnlock is a Chrome extension that lets a developer keep Chrome DevTools open on one specific site without that page ending their session. This document describes exactly what the extension does and does not do with data.
 
 Rendered version: <https://walle-go.github.io/devtools-unlock-privacy/>
 
 ## Summary
 
-**DevTools Unlock does not collect, transmit, sell, or share any user data.** There is no server, no analytics, no telemetry, and no network request of any kind originating from this extension.
+**DevUnlock does not collect, transmit, sell, or share any user data.** There is no server, no analytics, no telemetry, and no network request of any kind originating from this extension.
 
 ## Data we collect
 
